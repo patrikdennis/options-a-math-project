@@ -14,10 +14,10 @@ This repository contains all the code, data, and documentation for our project o
 ## 2. Data Preparation and Return Calculations
 - **Daily log returns** calculated as:
 
-  \[
+  $$
   r_t = \ln\left(\frac{P_t}{P_{t-1}}\right),
-  \]
-  where \( P_t \) is the adjusted closing price on day \( t \).
+  $$
+  where $ P_t $ is the adjusted closing price on day $ t $.
 
 ## 3. Exploratory Plots
 1. **Time-Series Plot**  
