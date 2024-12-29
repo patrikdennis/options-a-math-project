@@ -14,9 +14,7 @@ This repository contains all the code, data, and documentation for our project o
 ## 2. Data Preparation and Return Calculations
 - **Daily log returns** calculated as:
 
-  $$
-  r_t = \ln\left(\frac{P_t}{P_{t-1}}\right),
-  $$
+  $$r_t = \ln\left(\frac{P_t}{P_{t-1}}\right),$$
   
   where $P_t$ is the adjusted closing price on day $t$.
 
@@ -31,15 +29,13 @@ This repository contains all the code, data, and documentation for our project o
 - Plotted the rolling volatility for both stocks on the same figure.
 
 ## 5. Annualized Volatility
-- Scaled the rolling volatility by \(\sqrt{252}\) to convert from daily to annualized volatility.  
+- Scaled the rolling volatility by $\sqrt{252}$ to convert from daily to annualized volatility.  
 - **Averaged** this annualized volatility over the three-year period to produce a single figure per stock (e.g., ~26–27% for AAPL, ~24–25% for VOLV-B).
 
 ## 6. Volatility-Scaled Returns
 - Created a new time series by **dividing each day’s return** by its 20-day rolling volatility:
 
-  \[
-  \frac{r_t}{\sigma_{d}(t)},
-  \]
+  $$\frac{r_t}{\sigma_{d}(t)},$$
 
   to “standardize” fluctuations.
 - Plotted both stocks’ scaled returns and their histograms to see if they align more closely with a standard normal distribution.
@@ -52,16 +48,12 @@ This repository contains all the code, data, and documentation for our project o
   - Risk-free rate  
 - Used the computed annualized volatility estimate as input for the **Black–Scholes** model:
 
-  \[
-  C = S_0 \Phi(d_1) - K e^{-r T} \Phi(d_2),
-  \]
+  $$C = S_0 \Phi(d_1) - K e^{-r T} \Phi(d_2),$$
 
   where
-  \[
-  d_1 = \frac{\ln\left(\frac{S_0}{K}\right) + \left(r + \frac{\sigma^2}{2}\right) T}{\sigma \sqrt{T}}, 
+  $$d_1 = \frac{\ln\left(\frac{S_0}{K}\right) + \left(r + \frac{\sigma^2}{2}\right) T}{\sigma \sqrt{T}}, 
   \quad
-  d_2 = d_1 - \sigma \sqrt{T}.
-  \]
+  d_2 = d_1 - \sigma \sqrt{T}.$$
 
 - Compared the **theoretical Black–Scholes price** to the **actual market price**, discussing potential reasons for discrepancies (implied vs. historical volatility, dividends, market microstructure, etc.).
 
