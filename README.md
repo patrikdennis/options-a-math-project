@@ -70,5 +70,5 @@ Observed whether scaling reduces skewness and kurtosis, noting persistent deviat
 
 1. **Clone the Repo**:
    ```bash
-   git clone https://github.com/YourUsername/YourRepo.git
-   cd YourRepo
+   git clone https://github.com/patrikdennis/options-a-math-project.git
+   cd options-a-math-project
